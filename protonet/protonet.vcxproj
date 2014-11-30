@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B4FC237-A6D4-4AEE-BAC5-C7E6A901C654}</ProjectGuid>
+    <RootNamespace>protonet</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\build\win\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)\build\win\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src</SourcePath>
+    <OutDir>$(SolutionDir)\build\win\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)/include;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)/src</SourcePath>
+    <OutDir>$(SolutionDir)\build\win\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\cond.h" />
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\datalink.h" />
+    <ClInclude Include="include\message\Enter.h" />
+    <ClInclude Include="include\message\Exit.h" />
+    <ClInclude Include="include\message\PayloadBayCommand.h" />
+    <ClInclude Include="include\message\PayloadBayModeCommand.h" />
+    <ClInclude Include="include\message\Ping.h" />
+    <ClInclude Include="include\message\Pong.h" />
+    <ClInclude Include="include\message\TargetDesignationCommand.h" />
+    <ClInclude Include="include\message\UGVBatteryStatus.h" />
+    <ClInclude Include="include\message\UGVJoystick.h" />
+    <ClInclude Include="include\message\VehicleAttitude.h" />
+    <ClInclude Include="include\message\VehicleAuthorizationReply.h" />
+    <ClInclude Include="include\message\VehicleAuthorizationRequest.h" />
+    <ClInclude Include="include\message\VehicleBodySensedState.h" />
+    <ClInclude Include="include\message\VehicleGlobalPosition.h" />
+    <ClInclude Include="include\message\VehicleGroundRelativeState.h" />
+    <ClInclude Include="include\message\VehicleIdentification.h" />
+    <ClInclude Include="include\message\VehicleInertialState.h" />
+    <ClInclude Include="include\message\VehicleModeCommand.h" />
+    <ClInclude Include="include\message\VehicleSystemStatus.h" />
+    <ClInclude Include="include\message\VehicleTelemetryCommand.h" />
+    <ClInclude Include="include\message\VehicleTerminationCommand.h" />
+    <ClInclude Include="include\message\VehicleWaypointCommand.h" />
+    <ClInclude Include="include\mutex.h" />
+    <ClInclude Include="include\protonet.h" />
+    <ClInclude Include="include\protonet_marshal.h" />
+    <ClInclude Include="include\protonet_message.h" />
+    <ClInclude Include="include\protonet_parser.h" />
+    <ClInclude Include="include\protonet_protocol.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="include\message\Raw.h" />
+    <ClInclude Include="include\serial.h" />
+    <ClInclude Include="include\thread.h" />
+    <ClInclude Include="include\udp.h" />
+    <ClInclude Include="include\xbee.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cond.cpp" />
+    <ClCompile Include="src\datalink.cpp" />
+    <ClCompile Include="src\message\Enter.cpp" />
+    <ClCompile Include="src\message\Exit.cpp" />
+    <ClCompile Include="src\message\PayloadBayCommand.cpp" />
+    <ClCompile Include="src\message\PayloadBayModeCommand.cpp" />
+    <ClCompile Include="src\message\Ping.cpp" />
+    <ClCompile Include="src\message\Pong.cpp" />
+    <ClCompile Include="src\message\TargetDesignationCommand.cpp" />
+    <ClCompile Include="src\message\UGVBatteryStatus.cpp" />
+    <ClCompile Include="src\message\UGVJoystick.cpp" />
+    <ClCompile Include="src\message\VehicleAttitude.cpp" />
+    <ClCompile Include="src\message\VehicleAuthorizationReply.cpp" />
+    <ClCompile Include="src\message\VehicleAuthorizationRequest.cpp" />
+    <ClCompile Include="src\message\VehicleBodySensedState.cpp" />
+    <ClCompile Include="src\message\VehicleGlobalPosition.cpp" />
+    <ClCompile Include="src\message\VehicleGroundRelativeState.cpp" />
+    <ClCompile Include="src\message\VehicleIdentification.cpp" />
+    <ClCompile Include="src\message\VehicleInertialState.cpp" />
+    <ClCompile Include="src\message\VehicleModeCommand.cpp" />
+    <ClCompile Include="src\message\VehicleSystemStatus.cpp" />
+    <ClCompile Include="src\message\VehicleTelemetryCommand.cpp" />
+    <ClCompile Include="src\message\VehicleTerminationCommand.cpp" />
+    <ClCompile Include="src\message\VehicleWaypointCommand.cpp" />
+    <ClCompile Include="src\mutex.cpp" />
+    <ClCompile Include="src\protonet.cpp" />
+    <ClCompile Include="src\protonet_marshal.cpp" />
+    <ClCompile Include="src\protonet_message.cpp" />
+    <ClCompile Include="src\protonet_parser.cpp" />
+    <ClCompile Include="src\protonet_protocol.cpp" />
+    <ClCompile Include="src\queue.cpp" />
+    <ClCompile Include="src\serial.cpp" />
+    <ClCompile Include="src\thread.cpp" />
+    <ClCompile Include="src\udp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
